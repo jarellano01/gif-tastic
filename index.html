@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	</head>
-	<body>
-		<!-- Navbar -->
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle ∫get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Title</a>
-				</div>
-		
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="nav1">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li><a href="#">Separated link</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div>
-		</nav>
+                <a class="navbar-brand" href="#">GifTastic</a>
+            </div>
 
-		<!-- Body -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://github.com/jarellano01">GitHub Repo</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					
-				</div>
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					
-				</div>
-			</div>
+    <!-- Body -->
 
-			
-		</div>
+    <div class="container">
+        <div class="row">
+            <!-- <form action="" method="POST" role="form"> -->
+                <div class="col-sm-12">
+                    <legend>Add a New Gif Search</legend>
+                </div>
+            
+                <div class="form-group col-xs-10 col-sm-4">
+                    <input type="text" class="form-control" id="search-value">
+                </div>
+                <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
+            <!-- </form> -->
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="gif-searches">
+                <button type="button" class="btn btn-success">Bear</button>
+                <button type="button" class="btn btn-success">Dog</button>
+                <button type="button" class="btn btn-success">Cat</button>
+                <button type="button" class="btn btn-success">Whale</button>
+                <button type="button" class="btn btn-success">Bear</button>
+                <button type="button" class="btn btn-success">Dog</button>
+                <button type="button" class="btn btn-success">Cat</button>
+                <button type="button" class="btn btn-success">Whale</button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="gif-container" class="col-sm-12">
+                <div id="img-container">
+                    <p>Rating: G</p>
+                    <img src="https://placeimg.com/640/480/any" alt="Image">
+                </div>
+                <div id="img-container">
+                    <p>Rating: G</p>
+                    <img src="https://placeimg.com/640/480/any" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
 
-		<script src="assets/js/jquery-3.1.0.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-	</body>
+
+    <script src="assets/js/jquery-3.1.0.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
