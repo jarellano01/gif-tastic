@@ -1,12 +1,13 @@
 $(function(){
 	$("#add-btn").click(function(){
 		addNewGifBtn($("#search-value").val());
-		console.log($("#search-value").val());
 		return false;
 	})
-	// $('#add-btn').click(function() {
-	// 	generateGifs("Money");	
-	// });
+
+
+	$('#shoot').click(function(){
+		addNewGifBtn("Awesomeness");
+	});
 
 	function addNewGifBtn(searchValue){
 		var btn = $('<button type="button" class="btn btn-success">' + searchValue + '</button>');
@@ -18,6 +19,9 @@ $(function(){
 		});
 	}
 
+
+	
+
 	function generateGifs(searchValue){
 		var giphyLink = "http://api.giphy.com/v1/gifs/search?q=" + searchValue + "&api_key=dc6zaTOxFJmzC&limit=20&offset=0";
 		var gifArray;
@@ -27,25 +31,27 @@ $(function(){
 
 			$('#results').empty();
 
+			$('').click(function (e) {
+				e.preventDefault();
+			});;
 			for(i=0; i<gifArray.data.length; i++){
 				appendGif(gifArray.data[i]);
 			}
-
 		});
-		console.log(gifArray);
 	}
 
-	function appendGif(giphyUrl)
+
+	function appendGif(gifObject)
 	{
 		var newContainer = $('<div>');
 		newContainer.attr('id', 'img-container');
 
 		var newImage = $('<img>');
-		newImage.attr('src', giphyUrl.images.original_still.url);
+		newImage.attr('src', gifObject.images.original_still.url);
 		newImage.click(function(){playPause(this)});
 
 		var ratingText = $('<p>');
-		ratingText.text("Rating: " + giphyUrl.rating);
+		ratingText.text("Rating: " + gifObject.rating);
 
 		newContainer.append(ratingText).append(newImage);
 
@@ -62,6 +68,4 @@ $(function(){
 		}
 		$(curImg).attr('src', toggledPath);
 	}
-
-	
 })
