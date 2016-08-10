@@ -15,15 +15,10 @@ $(function(){
 		});
 	}
 
-	addNewGifBtn("dog");
-	addNewGifBtn("cat");
-	addNewGifBtn("panda");
-	addNewGifBtn("money");
-	addNewGifBtn("friends");
-	addNewGifBtn("dancing");
-
-
-	
+	var loadArray = ["dog", "cat", "panda", "money", "friends", "dancing"];
+	$.each(loadArray, function(index, val) {
+		 addNewGifBtn(val);
+	});
 
 	function generateGifs(searchValue){
 		var giphyLink = "http://api.giphy.com/v1/gifs/search?q=" + searchValue + "&api_key=dc6zaTOxFJmzC&limit=20&offset=0";
