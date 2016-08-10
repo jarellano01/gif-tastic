@@ -1,13 +1,9 @@
 $(function(){
 	$("#add-btn").click(function(){
 		addNewGifBtn($("#search-value").val());
+		$("#search-value").val("");
 		return false;
 	})
-
-
-	$('#shoot').click(function(){
-		addNewGifBtn("Awesomeness");
-	});
 
 	function addNewGifBtn(searchValue){
 		var btn = $('<button type="button" class="btn btn-success">' + searchValue + '</button>');
@@ -18,6 +14,13 @@ $(function(){
 			generateGifs(searchValue);
 		});
 	}
+
+	addNewGifBtn("dog");
+	addNewGifBtn("cat");
+	addNewGifBtn("panda");
+	addNewGifBtn("money");
+	addNewGifBtn("friends");
+	addNewGifBtn("dancing");
 
 
 	
