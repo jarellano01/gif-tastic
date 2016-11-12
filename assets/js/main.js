@@ -21,7 +21,7 @@ $(function(){
 	});
 
 	function generateGifs(searchValue){
-		var giphyLink = "http://api.giphy.com/v1/gifs/search?q=" + searchValue + "&api_key=dc6zaTOxFJmzC&limit=20&offset=0";
+		var giphyLink = "https://api.giphy.com/v1/gifs/search?q=" + searchValue + "&api_key=dc6zaTOxFJmzC&limit=20&offset=0";
 		var gifArray;
 
 		$.getJSON(giphyLink, function(json) {
